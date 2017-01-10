@@ -8,7 +8,7 @@
 <!--[if gt IE 8]><!-->
 <html lang="en" data-framework="angularjs" class=""> <!--<![endif]-->
 <head>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Meta-Information -->
 <!-- etc… -->
 
@@ -17,6 +17,8 @@
 
 <!-- Our Website CSS Styles -->
 <link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/bootstrap-mod.css">
 
 
 </head>
@@ -25,26 +27,36 @@
 <!-- etc… -->
 <![endif]-->
 
-	<div ng-app="resume-app"> 
-		<span class="highlight">Rez</span>
+	<div class="parallax"></div>
+		<div style="height:1000px">
+	
+	<div ng-app="resume-app" ng-controller="homeCtrl">
 		<div ng-include="'app/components/partials/nav.html'"></div>
-		<div ng-view></div>
-		<div ng-include="'app/components/partials/footer.html'"></div>
 
+		<div ng-view>
+			
+		</div>
 
+		</div>
+	<!--	<div ng-include="'app/components/partials/footer.html'"></div> -->
+	
+	</div>
+	
 	</div>
 
-<!-- Vendor: Javascripts -->
-<!-- etc… -->
-
 <!-- Our Website Javascripts -->
-<script src="assets/js/less.min.js"></script>
+<script src="assets/js/jquery-3.1.1.min.js"></script>
 <script src="assets/js/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script src="assets/js/angular-route.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
 
 <!-- realzies -->
 <script src="app/app.module.js"></script>
 <script src="app/app.routes.js"></script>
 <script src="app/components/home/homeController.js"></script>
 </body>
+
+
+
 </html>
